@@ -1,9 +1,0 @@
-Scan results for 10.12.1.14:
-
-Host: 10.12.1.14 ()
-State: up
-OS Match: [{'name': 'Linux 2.6.32', 'accuracy': '100', 'line': '55742', 'osclass': [{'type': 'general purpose', 'vendor': 'Linux', 'osfamily': 'Linux', 'osgen': '2.6.X', 'accuracy': '100', 'cpe': ['cpe:/o:linux:linux_kernel:2.6.32']}]}]
-Traceroute: [{'name': '', 'type': ''}]
-
-Protocol: tcp
-Port: 80, State: open, Service: http

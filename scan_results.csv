@@ -1,2 +1,2 @@
-Host,Port,State,Service
-10.12.1.14,5432,closed,postgresql
+Host,Port,State,Service,OS
+8.8.8.8,22,filtered,ssh,[]

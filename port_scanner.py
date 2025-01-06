@@ -35,7 +35,8 @@ def scan_ports(target, ports, scan_type, output_format):
                         "state": port_info['state'],
                         "service": port_info.get('name', 'Unknown')
                     }
-                    
+        
+        # Save the results based on the chosen output format
         if output_format == "CSV":
             save_to_csv(result)
         elif output_format == "JSON":
@@ -51,11 +52,11 @@ def save_to_csv(result):
     """Saves scan results to a CSV file."""
     with open("scan_results.csv", mode='w', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(["Host", "Port", "State", "Service"])
+        writer.writerow(["Host", "Port", "State", "Service", "OS"])
         
         for host, details in result.items():
             for port, port_info in details["ports"].items():
-                writer.writerow([host, port, port_info['state'], port_info['service']])
+                writer.writerow([host, port, port_info['state'], port_info['service'], details['os']])
 
 def save_to_json(result):
     """Saves scan results to a JSON file."""
